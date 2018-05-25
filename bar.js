@@ -12,10 +12,9 @@ function clickedSubmit() {
     dRate = parseFloat(document.getElementById(r + "-death").value);
     arr[i] = calcResult(numYears, initialPop[i], mRate, bRate, dRate);
   }
-
-  showChart(arr, numYears);
+  showBar(arr, numYears);
   total = arr.reduce(getSum);
-  showBar(arr, numYears, total);
+  showPie(arr, numYears, total);
 }
 
 function calcResult(numYears, iPop, mRate, bRate, dRate) {
@@ -23,7 +22,7 @@ function calcResult(numYears, iPop, mRate, bRate, dRate) {
 
   for (var i = 1; i < numYears + 1; i++) {
     //CHANGE GROWTH RATE HERE
-    result += (1.01 ** i * mRate + bRate - dRate) * result;
+    result += ((Math.random() / 500 + 0.999) ** i * mRate + bRate - dRate) * result;
   }
   return result;
 }
@@ -32,12 +31,10 @@ function getSum(total, num) {
     return total + num;
 }
 
-function showChart(arr, numYears, total) {
+function showBar(arr, numYears, total) {
   var chart = new CanvasJS.Chart("barchart", {
     animationEnabled: true,
     theme: "light2", // "light1", "light2", "dark1", "dark2"
-
-
     title:{
       text:"Population in " + numYears + " year(s)"
     },
@@ -61,7 +58,7 @@ function showChart(arr, numYears, total) {
   chart.render();
 }
 
-function showBar(arr, numYears) {
+function showPie(arr, numYears, total) {
   var chart = new CanvasJS.Chart("piechart", {
   	animationEnabled: true,
   	title: {
