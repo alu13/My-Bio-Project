@@ -10,10 +10,18 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  font-family: fantasy;
 }
 
 body > * {
   vertical-align: top;
+  line-height: normal;
+}
+
+.header {
+  background-color: #e7e7e7;
+  padding: 40px;
+  margin-bottom: 30px;
 }
 
 #graphs {
@@ -32,6 +40,14 @@ body > * {
   /* min-height: 100%; */
 }
 
+form {
+  border-style: solid;
+  border-color: #e7e7e7;
+  border-width: 1px;
+  border-radius: 10px
+  padding: 10px;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -41,6 +57,11 @@ body > * {
 .row > * {
   vertical-align: middle;
   line-height: normal;
+}
+
+.label {
+  width: 15%;
+  word-wrap: break-word;
 }
 
 .race {

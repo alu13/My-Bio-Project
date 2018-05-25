@@ -2,18 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Albert's Bio Project</title>
+    <title>My Bio Project</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="bar.js"></script>
   </head>
   <body>
+    <div class="header">Population Change</div>
     <div id="data">
       <form>
         <div class="row">
-          <p>Migration rate</p>
-          <p>Birth rate</p>
-          <p>Death rate</p>
+          <p class="race"></p>
+          <p class="label">Migration rate</p>
+          <p class="label">Birth rate</p>
+          <p class="label">Death rate</p>
         </div>
         <div class="row">
           <p class="race">White</p>
@@ -57,9 +59,6 @@
         </div>
       <input type="button" onclick="clickedSubmit()" value="Click!" id="submit-button">
       </form>
-
-      <div class="result">
-      </div>
     </div>
 
     <div id="graphs">
