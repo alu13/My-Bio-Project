@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Bio Project</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="bar.js"></script>
+  </head>
+  <body>
+    <div class="header">Population Change</div>
+    <div id="data">
+      <form>
+        <div class="row">
+          <p class="race"></p>
+          <p class="label">Migration rate</p>
+          <p class="label">Birth rate</p>
+          <p class="label">Death rate</p>
+        </div>
+        <div class="row">
+          <p class="race">White</p>
+          <input type="number" id="w-migration" value="0.0006600828216"><br>
+          <input type="number" id="w-birth" value="0.0107326385"><br>
+          <input type="number" id="w-death" value="0.00749"><br>
+        </div>
+        <div class="row">
+          <p class="race">Black</p>
+          <input type="number" id="b-migration" value="0.002927108606"><br>
+          <input type="number" id="b-birth" value="0.01522573376"><br>
+          <input type="number" id="b-death" value="0.0085724"><br>
+        </div>
+        <div class="row">
+          <p class="race">Latinx</p>
+          <input type="number" id="l-migration" value="0.01005377843"><br>
+          <input type="number" id="l-birth" value="0.01928955331"><br>
+          <input type="number" id="l-death" value="0.0052578"><br>
+        </div>
+        <div class="row">
+          <p class="race">Asian</p>
+          <input type="number" id="a-migration" value="0.02984657484"><br>
+          <input type="number" id="a-birth" value="0.01807713397"><br>
+          <input type="number" id="a-death" value="0.003926"><br>
+        </div>
+        <div class="row">
+          <p class="race">Middle Eastern</p>
+          <input type="number" id="m-migration" value="0.01375158545"><br>
+          <input type="number" id="m-birth" value="0.01809287415"><br>
+          <input type="number" id="m-death" value="0.00749"><br>
+        </div>
+        <div class="row">
+          <p class="race">Native American</p>
+          <input type="number" id="n-migration" value="0" ><br>
+          <input type="number" id="n-birth" value="0.0107326385"><br>
+          <input type="number" id="n-death" value="0.011235"><br>
+        </div>
+        <div class="row">
+          <p class="years">Number of years</p>
+          <input type="number" id="years" value="1"><br>
+        </div>
+      <input type="button" onclick="clickedSubmit()" value="Click!" id="submit-button">
+      </form>
+    </div>
+
+    <div id="graphs">
+      <div id="barchart"></div>
+      <div id="piechart"></div>
+    </div>
+
+  </body>
+</html>
